@@ -15,9 +15,9 @@ const displayCards = (cards) => {
   const cardLabel2 = document.getElementById("cardlabel2");
   const cardLabel3 = document.getElementById("cardlabel3");
 
-  card1.setAttribute("src", `/images/${cardsList[cards[0].key].image}`);
-  card2.setAttribute("src", `/images/${cardsList[cards[1].key].image}`);
-  card3.setAttribute("src", `/images/${cardsList[cards[2].key].image}`);
+  card1.setAttribute("src", `./images/${cardsList[cards[0].key].image}`);
+  card2.setAttribute("src", `./images/${cardsList[cards[1].key].image}`);
+  card3.setAttribute("src", `./images/${cardsList[cards[2].key].image}`);
   cardLabel1.innerHTML = cards[0].value;
   cardLabel2.innerHTML = cards[1].value;
   cardLabel3.innerHTML = cards[2].value;
@@ -40,9 +40,9 @@ const displayReadings = (readings, cards) => {
   const card1Thumb = document.getElementById("card1thumb");
   const card2Thumb = document.getElementById("card2thumb");
   const card3Thumb = document.getElementById("card3thumb");
-  card1Thumb.setAttribute("src", `/images/${cardsList[cards[0].key].image}`);
-  card2Thumb.setAttribute("src", `/images/${cardsList[cards[1].key].image}`);
-  card3Thumb.setAttribute("src", `/images/${cardsList[cards[2].key].image}`);
+  card1Thumb.setAttribute("src", `./images/${cardsList[cards[0].key].image}`);
+  card2Thumb.setAttribute("src", `./images/${cardsList[cards[1].key].image}`);
+  card3Thumb.setAttribute("src", `./images/${cardsList[cards[2].key].image}`);
   const readingsWrapper = document.getElementById("readings");
   readingsWrapper.classList.remove("hidden");
 };
