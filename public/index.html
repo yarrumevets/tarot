@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarot</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almendra&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1><a href="#">Tarot</a></h1>
+    <img id="tellerhandleft" src="/images/tellerhandleft.png" alt="" />
+    <img id="tellerhandright" src="/images/tellerhandright.png" alt="" />
+
+    <div id="cards">
+      <img id="card1" src="/images/back.png" />
+      <img id="card2" src="/images/back.png" />
+      <img id="card3" src="/images/back.png" />
+    </div>
+
+    <div id="cardlabels">
+      <p id="cardlabel1"></p>
+      <p id="cardlabel2"></p>
+      <p id="cardlabel3"></p>
+    </div>
+
+    <div id="chatinputwrapper">
+      <label for="chatinput" id="chatinputlabel"
+        >What would you like to know?</label
+      >
+      <input type="text" id="chatinput" value="" />
+      <p id="questiontext" class="hidden"></p>
+      <button id="sendbutton">Send</button>
+    </div>
+
+    <div id="readings" class="hidden">
+      <div id="reading1">
+        <img id="card1thumb" src="" alt="" />
+        <p id="reading1text"></p>
+      </div>
+      <div id="reading2">
+        <img id="card2thumb" src="" alt="" />
+        <p id="reading2text"></p>
+      </div>
+      <div id="reading3">
+        <img id="card3thumb" src="" alt="" />
+        <p id="reading3text"></p>
+      </div>
+      <div id="readingsummary">
+        <img src="/images/back.png" alt="" />
+        <p id="readingsummarytext"></p>
+      </div>
+    </div>
+
+    <!-- <main>
+      <div id="chatlog">
+        <p class="log">
+          <message class="logmessage">chat started</message>
+        </p>
+      </div>
+    </main> -->
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

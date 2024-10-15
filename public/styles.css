@@ -1,0 +1,186 @@
+body {
+  /* background-color: black; */
+  background-color: #111111;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #f8f4e3;
+}
+
+body input {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  /* font-family: "Cinzel", serif; */
+  /* font-family: "Creepster", cursive; */
+  /* font-family: "Almendra", serif; */
+  /* font-family: "Amatic SC", cursive; */
+  font-family: "Goudy Bookletter 1911", serif;
+  margin: 1vw 0;
+  font-size: 7vw;
+  color: #333;
+  text-shadow: 1px 1px 2px #fff, /* Top-left white shadow */ -1px -1px 2px #000,
+    /* Bottom-right black shadow */ 1px -1px 2px #fff,
+    /* Top-right white shadow */ -1px 1px 2px #000; /* Bottom-left black shadow */
+  letter-spacing: 1px; /* Optional: Adjusts spacing between characters */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+#chatinputwrapper {
+  width: 70%;
+  margin: 3vw auto;
+}
+
+#chatinputwrapper label {
+  display: inline-block;
+  margin-left: 1vw;
+  margin-bottom: 1vw;
+}
+
+#chatinput,
+button {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+}
+
+#chatinput {
+  border: 0;
+  background-color: ivory;
+}
+
+#chatinput,
+#questiontext {
+  display: inline-block;
+  padding-left: 20px;
+  margin: 5px;
+  width: 100%;
+  font-size: 20px;
+}
+
+#questiontext {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+#chatinput:focus {
+  outline: none;
+  border: 0;
+}
+
+#chatinputwrapper.static label {
+  display: none;
+}
+
+#chatinputwrapper.static #chatinput {
+  background-color: #111111;
+  color: white;
+}
+
+/* not using right now */
+button {
+  display: none;
+}
+
+/* animate the question text */
+
+.fadingtext {
+  color: white; /* Starting color */
+  transition: all 1s ease; /* Smooth transition for growth and color fade */
+  animation: growAndFade 5s forwards; /* Animation name, duration, and repeat */
+}
+
+@keyframes growAndFade {
+  0% {
+    font-size: 20px; /* Initial font size */
+    color: white; /* Initial color */
+  }
+  100% {
+    font-size: 20px; /* Return to initial font size */
+    color: #111111; /* Return to initial color */
+    opacity: 0; /* Fade out to half opacity */
+  }
+}
+
+/* --- new tarot stuff --*/
+
+#cards,
+#cardlabels {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+
+#cards img {
+  width: 10%;
+}
+
+#cardlabels p {
+  width: calc(10% + 20px);
+  text-align: center;
+}
+
+#cards img {
+  border: 10px solid #f8f4e3;
+}
+
+#tellerhandleft,
+#tellerhandright {
+  position: absolute;
+  top: 0;
+  width: 25vw;
+}
+
+#tellerhandleft {
+  left: 0;
+}
+
+#tellerhandright {
+  right: 0;
+}
+
+/* Readings */
+
+#readings {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 2vw;
+}
+
+#readings div {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  gap: 2vw;
+}
+
+#readings div img {
+  width: 4vw;
+}
+
+#readings div p {
+  color: white;
+}
+
+/* hidden */
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
