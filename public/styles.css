@@ -133,7 +133,7 @@ button {
 }
 
 #cards img {
-  border: 10px solid #f8f4e3;
+  border: 1vw solid #f8f4e3;
 }
 
 #tellerhandleft,
@@ -170,6 +170,21 @@ button {
 
 #readings div img {
   width: 4vw;
+  height: calc(4vw * 173 / 100);
+  border: 0.25vw solid #f8f4e3;
+}
+
+@media screen and (max-width: 1200px) {
+  #readings div {
+    flex-direction: column;
+    gap: 1vw;
+    align-items: center;
+  }
+  #readings div img {
+    width: 8vw;
+    height: calc(8vw * 173 / 100);
+    border: 0.5vw solid #f8f4e3;
+  }
 }
 
 #readings div p {
@@ -183,4 +198,19 @@ button {
 
 .invisible {
   visibility: hidden !important;
+}
+
+footer {
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: lightgrey;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #04c2c9;
+  text-decoration: none;
 }
