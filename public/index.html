@@ -26,50 +26,53 @@
     />
   </head>
   <body>
-    <h1><a href="">Tarot</a></h1>
-    <img id="tellerhandleft" src="./images/tellerhandleft.png" alt="" />
-    <img id="tellerhandright" src="./images/tellerhandright.png" alt="" />
+    <header>
+      <h1><a href="">Tarot</a></h1>
+    </header>
+    <main>
+      <img id="tellerhandleft" src="./images/tellerhandleft.png" alt="" />
+      <img id="tellerhandright" src="./images/tellerhandright.png" alt="" />
 
-    <div id="cards">
-      <img id="card1" src="./images/back.png" />
-      <img id="card2" src="./images/back.png" />
-      <img id="card3" src="./images/back.png" />
-    </div>
-
-    <div id="cardlabels">
-      <p id="cardlabel1"></p>
-      <p id="cardlabel2"></p>
-      <p id="cardlabel3"></p>
-    </div>
-
-    <div id="chatinputwrapper">
-      <label for="chatinput" id="chatinputlabel"
-        >What would you like to know?</label
-      >
-      <input type="text" id="chatinput" value="" />
-      <p id="questiontext" class="hidden"></p>
-      <button id="sendbutton">Send</button>
-    </div>
-
-    <div id="readings" class="hidden">
-      <div id="reading1">
-        <img id="card1thumb" src="" alt="" />
-        <p id="reading1text"></p>
+      <div id="cards">
+        <img id="card1" src="./images/back.png" />
+        <img id="card2" src="./images/back.png" />
+        <img id="card3" src="./images/back.png" />
       </div>
-      <div id="reading2">
-        <img id="card2thumb" src="" alt="" />
-        <p id="reading2text"></p>
-      </div>
-      <div id="reading3">
-        <img id="card3thumb" src="" alt="" />
-        <p id="reading3text"></p>
-      </div>
-      <div id="readingsummary">
-        <img src="./images/back.png" alt="" />
-        <p id="readingsummarytext"></p>
-      </div>
-    </div>
 
+      <div id="cardlabels">
+        <p id="cardlabel1"></p>
+        <p id="cardlabel2"></p>
+        <p id="cardlabel3"></p>
+      </div>
+
+      <div id="chatinputwrapper">
+        <label for="chatinput" id="chatinputlabel"
+          >What would you like to know?</label
+        >
+        <input type="text" id="chatinput" value="" />
+        <p id="questiontext" class="hidden"></p>
+        <button id="sendbutton">Send</button>
+      </div>
+
+      <div id="readings" class="hidden">
+        <div id="reading1">
+          <img id="card1thumb" src="" alt="" />
+          <p id="reading1text"></p>
+        </div>
+        <div id="reading2">
+          <img id="card2thumb" src="" alt="" />
+          <p id="reading2text"></p>
+        </div>
+        <div id="reading3">
+          <img id="card3thumb" src="" alt="" />
+          <p id="reading3text"></p>
+        </div>
+        <div id="readingsummary">
+          <img src="./images/back.png" alt="" />
+          <p id="readingsummarytext"></p>
+        </div>
+      </div>
+    </main>
     <!-- <main>
       <div id="chatlog">
         <p class="log">
@@ -79,15 +82,20 @@
     </main> -->
 
     <footer>
-      <p>© 2024 Spooky.Boutique</p>
       <p>
-        The tarot readings provided here are for entertainment purposes only.
-      </p>
-      <p>
-        Powered by
-        <a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a>
-        and
-        <a href="https://www.midjourney.com/" target="_blank">Midjourney</a>
+        <span>© 2024 Spooky.Boutique</span>
+        <span
+          >The tarot readings provided here are forentertainment purposes
+          only.</span
+        >
+        <span
+          >Powered by
+          <a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a>
+          and
+          <a href="https://www.midjourney.com/" target="_blank"
+            >Midjourney</a
+          ></span
+        >
       </p>
       <!-- <p>
         <a href="https://spooky.boutique/tarot">Terms of Service</a>
