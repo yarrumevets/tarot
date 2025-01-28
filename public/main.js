@@ -73,7 +73,6 @@ async function doSend() {
   }).catch((err) => console.error("Error: ", err));
   const jsonResponse = await response.json();
   console.log("json response: ", jsonResponse);
-  // createChatLog("Tarot Reader: ", jsonResponse.response);
   displayReadings(JSON.parse(jsonResponse.response), jsonResponse.cards);
   displayCards(jsonResponse.cards);
 }

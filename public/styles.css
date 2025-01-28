@@ -6,7 +6,6 @@ body {
 }
 
 body {
-  /* background-color: black; */
   background-color: #111111;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #f8f4e3;
@@ -17,9 +16,6 @@ body {
 
 body input {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-header {
 }
 
 h1 {
@@ -127,8 +123,6 @@ button {
   }
 }
 
-/* --- new tarot stuff --*/
-
 #cards,
 #cardlabels {
   display: flex;
@@ -166,7 +160,6 @@ button {
 }
 
 /* Readings */
-
 #readings {
   display: flex;
   flex-direction: column;
@@ -242,6 +235,6 @@ footer p {
 }
 
 footer p > *:not(:last-child)::after {
-  content: "\2022"; /* Add a pipe after every item except the last */
+  content: "\2022"; /* Add bullet point after every item except the last */
   padding-left: 1vw;
 }
