@@ -32,4 +32,4 @@ const systemRole = `You are an old wise tarot card reader.
   }
   `;
 
-module.exports = { systemRole };
+export default systemRole;

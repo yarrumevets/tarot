@@ -1,7 +1,7 @@
 import express from "express";
-import openaiApiCreds from "./openaiApiCreds.json";
-import { systemRole } from "./gptconfig.js";
-import { cardInfo } from "./cardinfo.js";
+import openaiApiCreds from "./openaiApiCreds.js";
+import systemRole from "./gptconfig.js";
+import cardInfo from "./cardinfo.js";
 import { createReading, getReadings } from "./db.js";
 
 const app = express();

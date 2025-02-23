@@ -1,4 +1,4 @@
-cardInfo = {
+const cardInfo = {
   fool: {
     name: "The Fool",
     meaning: "A leap into the unknown, new beginnings.",
@@ -56,4 +56,4 @@ cardInfo = {
   world: { name: "The World", meaning: "Completion, fulfillment, wholeness." },
 };
 
-module.exports = { cardInfo };
+export default cardInfo;
