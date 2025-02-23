@@ -66,7 +66,7 @@ app.post("/api/ask", (req, res) => {
   fetch("https://api.openai.com/v1/chat/completions", requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      jsonResult = JSON.parse(result);
+      const jsonResult = JSON.parse(result);
       if (jsonResult && jsonResult.choices && jsonResult.choices[0]) {
         const responseMessage = jsonResult.choices[0].message.content;
 
@@ -84,13 +84,13 @@ app.post("/api/ask", (req, res) => {
           cards: myCards,
         });
 
-        res.send({
+        return res.send({
           response: responseMessage,
           usage: jsonResult.usage,
           cards: myCards,
         });
       } else {
-        res.send({ response: "" });
+        return res.send({ response: "" });
       }
     })
     .catch((error) => console.log("error", error));
