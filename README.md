@@ -46,12 +46,11 @@ yarn
 
 ## Setup
 
-Create file in root `openaiApiCreds.json` with your OpenAi api key in this format:
+Create file in root `openaiApiCreds.js` with your OpenAi api key in this format:
 
 ```
-{
-  "openaiApiKey": "xx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-}
+const openaiApiKey = "xx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+export default openaiApiKey;
 ```
 
 ## Usage
