@@ -1,5 +1,5 @@
 import express from "express";
-import openaiApiCreds from "./openaiApiCreds.js";
+import openaiApiKey from "./openaiApiCreds.js";
 import systemRole from "./gptconfig.js";
 import cardInfo from "./cardinfo.js";
 import { createReading, getReadings } from "./db.js";
@@ -35,7 +35,7 @@ app.post("/api/ask", (req, res) => {
   const message = req.body.message;
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("Authorization", `Bearer ${openaiApiCreds.openaiApiKey}`);
+  myHeaders.append("Authorization", `Bearer ${openaiApiKey}`);
   const myCards = getRandomCards(3);
   const fullMessage = `${message}. My tarot cards are: ${myCards[0].value},  ${myCards[1].value}, and ${myCards[2].value}.`;
   const raw = JSON.stringify({
