@@ -96,6 +96,12 @@ app.post("/api/ask", (req, res) => {
     .catch((error) => console.log("error", error));
 });
 
+// Health check for AWS ALB
+app.get("/health", (req, res) => {
+  console.log("Health Check!");
+  return res.status(200).send("Healthy");
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
