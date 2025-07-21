@@ -92,7 +92,9 @@ app.post("/api/ask", (req, res) => {
           cards: myCards,
         });
       } else {
-        return res.send({ response: "" });
+        return res.send({
+          response: "",
+        });
       }
     })
     .catch((error) => console.log("error", error));
@@ -101,7 +103,7 @@ app.post("/api/ask", (req, res) => {
 // Health check for AWS ALB
 app.get("/health", (req, res) => {
   console.log("Health Check!");
-  return res.status(200).send("Healthy");
+  return res.status(200).send({ message: "Healthy", vid: process.env.VM_ID });
 });
 
 app.listen(port, () => {

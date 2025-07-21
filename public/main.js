@@ -6,6 +6,18 @@ const inputField = document.getElementById("chatinput");
 const inputFieldLabel = document.getElementById("chatinputlabel");
 const questionText = document.getElementById("questiontext");
 
+// Not necessary. Using this app to test ALBs.
+const healthCheck = async () => {
+  console.log("health...");
+  const vid = document.getElementById("vid");
+  const response = await fetch("./health", {
+    method: "GET",
+  }).catch((err) => console.error("Error doing health check: ", err));
+  const jsonResponse = await response.json();
+  vid.innerHTML = `❤️‍🩹 ${jsonResponse.vid}`;
+};
+healthCheck();
+
 // Display cards
 const displayCards = (cards) => {
   const card1 = document.getElementById("card1");
