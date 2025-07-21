@@ -6,5 +6,6 @@ Desktop.ini
 node_modules/
 *.log
 .env
+*.env
 
 openaiApiCreds.js

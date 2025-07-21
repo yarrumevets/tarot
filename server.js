@@ -1,27 +1,4 @@
-import dotenv from "dotenv";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-// Load shared .env
-dotenv.config({ path: path.resolve(__dirname, "../.env") });
-
-// Load app-specific .env if present (if/when added)
-// dotenv.config({ path: path.resolve(__dirname, ".env") });
-
-dotenv.config({ path: "../.env" });
-dotenv.config();
-
-console.log(
-  "tarot mongodb url: ",
-  process.env.MONGODB_URL,
-  " ---- ctrl: ",
-  process.env.NODE_ENV
-);
-
-import fs from "fs";
-console.log("EXXXXXISSSTSSS: ", fs.existsSync("../.env")); // should print true
+import "./loadenv.js";
 
 import express from "express";
 import openaiApiKey from "./openaiApiCreds.js";
