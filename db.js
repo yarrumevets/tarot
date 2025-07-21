@@ -6,7 +6,7 @@ const mongoObjectId = mongodb.ObjectId;
 
 const dbConnect = async (dbName) => {
   try {
-    const client = await MongoClient.connect("mongodb://localhost:27017");
+    const client = await MongoClient.connect(process.env.MONGODB_URL); // default: "mongodb://localhost:27017"
     const db = client.db(dbName);
     return db;
   } catch (error) {

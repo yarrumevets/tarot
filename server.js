@@ -4,6 +4,9 @@ import systemRole from "./gptconfig.js";
 import cardInfo from "./cardinfo.js";
 import { createReading, getReadings } from "./db.js";
 
+require("dotenv").config({ path: "../.env" }); // load shared first
+require("dotenv").config(); // load local, overrides shared if needed
+
 const app = express();
 const port = process.env.PORT || 4666;
 
