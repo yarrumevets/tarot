@@ -9,6 +9,9 @@ console.log(
   process.env.NODE_ENV
 );
 
+import fs from "fs";
+console.log("EXXXXXISSSTSSS: ", fs.existsSync("../.env")); // should print true
+
 import express from "express";
 import openaiApiKey from "./openaiApiCreds.js";
 import systemRole from "./gptconfig.js";
