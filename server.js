@@ -2,6 +2,13 @@ import dotenv from "dotenv";
 dotenv.config({ path: "../.env" });
 dotenv.config();
 
+console.log(
+  "tarot mongodb url: ",
+  process.env.MONGODB_URL,
+  " ---- ctrl: ",
+  process.env.NODE_ENV
+);
+
 import express from "express";
 import openaiApiKey from "./openaiApiCreds.js";
 import systemRole from "./gptconfig.js";
