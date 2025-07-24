@@ -17,11 +17,6 @@ app.get("/", (req, res) => {
   res.sendFile("public/index.html", { root: __dirname });
 });
 
-// Health check (provides VM ID)
-app.get("/health", (req, res) => {
-  res.json({ instanceId: process.env.VM_ID });
-});
-
 function getRandomCards(numValues) {
   // Convert the cardInfo into an array of objects with key and name
   const cards = Object.entries(cardInfo).map(([key, value]) => {
