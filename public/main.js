@@ -8,7 +8,12 @@ const questionText = document.getElementById("questiontext");
 
 // Get VM ID via health check
 const getVmId = async () => {
-  const vmId = document.getElementById("vm-id");
+  const vmId = document.createElement("p");
+  vmId.style.position = "absolute";
+  vmId.style.bottom = "10px";
+  vmId.style.right = "10px";
+  vmId.style.color = "#f00";
+  document.body.appendChild(vmId);
   const response = await fetch("./health", {
     method: "GET",
   }).catch((err) => console.error("Error doing health check: ", err));

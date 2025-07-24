@@ -238,10 +238,3 @@ footer p > *:not(:last-child)::after {
   content: "\2022"; /* Add bullet point after every item except the last */
   padding-left: 1vw;
 }
-
-#vm-id {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: red;
-}
