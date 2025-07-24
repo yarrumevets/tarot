@@ -1,5 +1,4 @@
 import "./loadenv.js";
-
 import express from "express";
 import openaiApiKey from "./openaiApiCreds.js";
 import systemRole from "./gptconfig.js";
@@ -16,6 +15,11 @@ app.use(express.json());
 // Route / : Serve public folder
 app.get("/", (req, res) => {
   res.sendFile("public/index.html", { root: __dirname });
+});
+
+// Health check (provides VM ID)
+app.get("/health", (req, res) => {
+  res.json({ instanceId: process.env.VM_ID });
 });
 
 function getRandomCards(numValues) {
@@ -100,10 +104,9 @@ app.post("/api/ask", (req, res) => {
     .catch((error) => console.log("error", error));
 });
 
-// Health check for AWS ALB
+// Health check (provides VM ID)
 app.get("/health", (req, res) => {
-  console.log("Health Check!");
-  return res.status(200).send({ message: "Healthy", vid: process.env.VM_ID });
+  res.json({ vmId: process.env.VM_ID });
 });
 
 app.listen(port, () => {
